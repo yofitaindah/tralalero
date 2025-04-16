@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Template</title>
   <style>
+
+@font-face {
+      font-family: 'TralalaFont';
+      src: url('font/Final-Draft.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -81,11 +89,12 @@
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
+        font-family: 'TralalaFont', sans-serif;
+        color: #acf034;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+        transition: color 0.3s;
     }
 
     nav a:hover {
@@ -152,7 +161,7 @@
 
   <!-- Splash Screen -->
   <div class="splash">
-    <h1>TRALALERO TRALALA</h1>
+    <img src="img/logo-trala.png" alt="TRALALERO TRALALA" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
   </div>
 
   <!-- Background Video -->
@@ -181,8 +190,9 @@
 
   <!-- Content Sections -->
   <section id="about">
-    <h2>Home</h2>
-    <p>Kami adalah Trala, sebuah platform musik yang menghadirkan pengalaman interaktif dan imersif untuk para penikmat seni suara dan visual.</p>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+            <img src="img/title.png" alt="How to Buy" style="max-width: 80%; height: auto;">
+        </div>
   </section>
 
   <section id="how-to-buy">
