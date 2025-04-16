@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 80px;
+      overflow-x: hidden;
+    }
+
+    /* Background Video */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Splash Screen */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+
+    .splash.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .splash h1 {
+      color: white;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 10;
+      backdrop-filter: blur(5px);
+    }
+
+    .logo-img {
+      width: 100px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Social Media */
+    .social-media {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .social-media img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-media img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Section Style */
+    section {
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      color: white;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      header {
+        height: 60px;
+        padding: 0 10px;
+      }
+
+      .logo-img {
+        width: 80px;
+      }
+
+      body {
+        padding-top: 60px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      .social-media img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div class="splash">
+    <h1>TRALALERO TRALALA</h1>
+  </div>
+
+  <!-- Background Video -->
+  <video class="background" autoplay muted loop>
+    <source src="img/bg-musik.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="img/logo-trala.png" alt="Logo">
+    </div>
+    <nav>
+      <a href="#about">Home</a>
+      <a href="#how-to-buy">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Social Media -->
+  <div class="social-media">
+    <a href="https://facebook.com" target="_blank"><img src="img/tele.png" alt="Facebook"></a>
+    <a href="https://twitter.com" target="_blank"><img src="img/twit.png" alt="Twitter"></a>
+    <a href="https://instagram.com" target="_blank"><img src="img/dext.png" alt="Instagram"></a>
+  </div>
+
+  <!-- Content Sections -->
+  <section id="about">
+    <h2>Home</h2>
+    <p>Kami adalah Trala, sebuah platform musik yang menghadirkan pengalaman interaktif dan imersif untuk para penikmat seni suara dan visual.</p>
+  </section>
+
+  <section id="how-to-buy">
+    <h2>About Us</h2>
+    <p>Untuk membeli produk kami, cukup ikuti langkah-langkah di website atau hubungi kami melalui media sosial yang tersedia di bawah.</p>
+  </section>
+
+  <!-- JavaScript for Splash -->
+  <script>
+    window.addEventListener('load', () => {
+      const splash = document.querySelector('.splash');
+      setTimeout(() => {
+        splash.classList.add('hidden');
+      }, 3000); // splash hilang setelah 3 detik
+    });
+  </script>
+
+</body>
+</html>
